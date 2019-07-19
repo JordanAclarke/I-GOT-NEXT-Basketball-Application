@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react'
 import axios from 'axios'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 /* Step 2
  * Rename this class to reflect the component being created
@@ -41,10 +41,19 @@ export default class Courts extends Component {
     *
     */
     render() {
+        let courtsList = this.state.courts.map((court) => {
+            return (
+                <div>
+                <Link to={court._id}>{court.gymName}</Link>
+                </div>
+
+            )
+        })
         return (
             <div>
                 {/* Accessing the value of message from the state object */}
-                <h1>{this.state.message}</h1>
+                <h1>Hello</h1>
+                {courtsList}
             </div>
         )
     }
