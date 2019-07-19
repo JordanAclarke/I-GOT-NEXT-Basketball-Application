@@ -98,6 +98,7 @@ state = {
                 <h3> Address: {this.state.court.address}</h3>
                 <p>Number of Players Coming: {this.state.court.numberOfPlayers}</p>
                 <p>Entry Price: {this.state.court.entryPrice}</p>
+                <button><a href='/courts'>Return To Courts</a></button>
             </div>
         )
     }

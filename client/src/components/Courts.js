@@ -133,6 +133,10 @@ export default class Courts extends Component {
             <div>
                 {/* Accessing the value of message from the state object */}
                 <button onClick={this.handleToggleNewForm}>Add Your Court</button>
+               
+                   <button>
+                   <Link to='/'>Home Page</Link>
+                   </button>
                 {courtsList}
             </div>
         )
