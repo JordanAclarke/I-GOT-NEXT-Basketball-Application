@@ -36,6 +36,7 @@ const courtRouter = express.Router()
  *
  * TODO: delete this handler; it's just a sample
  */ 
+
 courtRouter.get('/', (req, res) => {
   courtApi.getAllCourts()
     .then((courts) => {
