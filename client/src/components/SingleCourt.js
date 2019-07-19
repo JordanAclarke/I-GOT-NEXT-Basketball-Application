@@ -17,7 +17,7 @@ state = {
     render() {
         return (
             <div>
-                
+                {this.state.court.gymName}
             </div>
         )
     }
