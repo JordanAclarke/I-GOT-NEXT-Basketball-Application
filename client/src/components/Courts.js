@@ -44,7 +44,12 @@ export default class Courts extends Component {
         let courtsList = this.state.courts.map((court) => {
             return (
                 <div>
-                <Link to={court._id}>{court.gymName}</Link>
+                <Link 
+                key={court._id}
+                to={`/courts/${court._id}`}
+                >
+                {court.gymName}
+                </Link>
                 </div>
 
             )
