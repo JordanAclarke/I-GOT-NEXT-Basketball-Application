@@ -17,7 +17,7 @@ state = {
 
     handleInputChange =(event) => {
         const copiedCourt = {...this.state.court}
-        copiedCourt[event.target.gymName] = event.target.value
+        copiedCourt[event.target.name] = event.target.value
         this.setState({court: copiedCourt})
     }
 
