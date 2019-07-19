@@ -3,19 +3,21 @@
  */
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 /* Step 2
  * Rename this class to reflect the component being created
  *
  */
-export default class HelloWorld extends Component {
+export default class Courts extends Component {
 
     /* Step 3
     * Create a state for the component to store view data
     *
     */
     state = {
-        message: ''
+        courts: [],
+        isNewFormDisplayed: false
     }
 
     /* Step 4
@@ -26,9 +28,9 @@ export default class HelloWorld extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
-        axios.get('/api/helloworld')
+        axios.get('/api/courts')
             .then((res) => {
-                this.setState({message: res.data})
+                this.setState({courts: res.data})
             })
     }
 
