@@ -44,7 +44,7 @@ state = {
     }
     render() {
         if(this.state.reDirectToHome) {
-            return <Redirect to='/' />
+            return <Redirect to='/courts' />
         }
 
         return (
