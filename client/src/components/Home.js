@@ -8,7 +8,6 @@ export default class Home extends Component {
                 <Link to="/courts">
                 <img src='https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80' height='442' width='442'></img>
                 </Link>
-              {/* <Link to='/courts' >View Courts</Link> */}
             </div>
         )
     }

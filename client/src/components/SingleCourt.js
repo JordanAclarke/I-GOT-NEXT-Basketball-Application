@@ -96,9 +96,11 @@ state = {
                 <button onClick={this.handleDeleteCourt}>Delete Court</button>
                 <h2> {this.state.court.gymName}</h2>
                 <h3> Address: {this.state.court.address}</h3>
-                <p>Number of Players Coming: {this.state.court.numberOfPlayers}</p>
+                <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
                 <p>Entry Price: {this.state.court.entryPrice}</p>
                 <button><a href='/courts'>Return To Courts</a></button>
+
+                <h2>Current Players:</h2>
             </div>
         )
     }
