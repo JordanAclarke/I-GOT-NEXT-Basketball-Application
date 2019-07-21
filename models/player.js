@@ -46,8 +46,24 @@ const PlayerCollection = mongoose.model('Player', PlayerSchema)
  * TODO: delete this it's just a sample
  *
  */
-function getHelloWorldString() {
-  return 'hello world'
+function getAllPlayers() {
+  return PlayerCollection.find()
+}
+
+function getPlayer(playerId) {
+  return PlayerCollection.findById(playerId)
+}
+
+function getPlayerByCourtId(courtId) {
+  return PlayerCollection.find({courtId})
+}
+
+function addPlayer(playerObject) {
+  return PlayerCollection.create(playerObject)
+}
+
+function deletePlayer(courtId) {
+  return PlayerCollection.findByIdAndDelete(courtId)
 }
 
 /* Step 5
@@ -56,5 +72,9 @@ function getHelloWorldString() {
  * object
  */
 module.exports = {
-  getHelloWorldString
+  getAllPlayers,
+  getPlayer,
+  getPlayerByCourtId,
+  addPlayer,
+  deletePlayer
 }
