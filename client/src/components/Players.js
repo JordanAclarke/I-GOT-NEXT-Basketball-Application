@@ -59,7 +59,7 @@ export default class Players extends Component {
     handleSubmit = (event) => {
         event.preventDefault()
 
-        axios.post(`/api/players/`, this.state.newPlayer)
+        axios.post(`/api/players`, this.state.newPlayer)
         .then(() => {
             this.setState({isNewFormDisplayed: false})
             this.getAllPlayers()
@@ -84,11 +84,56 @@ export default class Players extends Component {
             )
         })
         return (
-            <div>
-                {/* Accessing the value of message from the state object */}
-                <h1>Hello World</h1>
+            
+                this.state.isNewFormDisplayed
+                ?
+                <form onSubmit={this.handleSubmit}>
+                <label htmlFor='player-name'>Player Name:</label>
+                <input 
+                type='text'
+                id='player-name'
+                name='name'
+                onChange={this.handleInputChange}
+                value ={this.state.newPlayer.name}
+                />
+
+                <label htmlFor='player-age-group'>Age-Group:</label>
+                <input 
+                type='text'
+                id='player-age-group'
+                name='ageGroup'
+                onChange={this.handleInputChange}
+                value ={this.state.newPlayer.ageGroup}
+                />
+
+                <label htmlFor='player-position'>Position:</label>
+                <input 
+                type='text'
+                id='player-position'
+                name='position'
+                onChange={this.handleInputChange}
+                value ={this.state.newPlayer.position}
+                />
+
+                <label htmlFor='player-bio'>Biography:</label>
+                <input 
+                type='text'
+                id='player-bio'
+                name='bio'
+                onChange={this.handleInputChange}
+                value ={this.state.newPlayer.bio}
+                />
+                <input
+                type='submit'
+                value='Add Player'
+                />
+                </form>
+                :
+                <div>
+
+            <button onClick={this.handleToggleNewForm}>Join this court</button>
                 {playersList}
-            </div>
+                 </div>
         )
     }
 }
