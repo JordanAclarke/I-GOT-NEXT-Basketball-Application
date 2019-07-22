@@ -34,10 +34,36 @@ export default class Players extends Component {
     *   -REMINDER remember `setState` it is an async function
     */
     componentDidMount() {
+        this.getAllPlayers()
+    }
+
+    getAllPlayers() {
         axios.get('/api/players')
             .then((res) => {
                 this.setState({players: res.data})
             })
+    }
+
+    handleToggleNewForm = () => {
+        this.setState((state) => {
+            return {isNewFormDisplayed: !state.isNewFormDisplayed}
+        })
+    }
+
+    handleInputChange = (event) => {
+        const copiedPlayer = {...this.state.newPlayer}
+        copiedPlayer[event.target.name] = event.target.value
+        this.setState({newPlayer: copiedPlayer})
+    }
+
+    handleSubmit = (event) => {
+        event.preventDefault()
+
+        axios.post(`/api/players/`, this.state.newPlayer)
+        .then(() => {
+            this.setState({isNewFormDisplayed: false})
+            this.getAllPlayers()
+        })
     }
 
     /* Step 5
