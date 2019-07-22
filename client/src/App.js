@@ -4,6 +4,8 @@ import Courts from './components/Courts'
 import SingleCourt from './components/SingleCourt'
 import Home from './components/Home'
 import './App.css';
+import Players from './components/Players'
+import SinglePlayer from './components/SinglePlayer';
 
 function App() {
   return (
@@ -12,7 +14,9 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/courts" component={Courts}/>
-          <Route path='/courts/:courtId' component={SingleCourt}/>
+          <Route exact path='/courts/:courtId' component={SingleCourt}/>
+          <Route exact path='/players' component={Players} />
+          <Route path='/players/:playerId' component={SinglePlayer} />
         </Switch>
       </Router>
     </div>
