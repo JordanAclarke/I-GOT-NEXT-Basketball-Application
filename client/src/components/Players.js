@@ -130,7 +130,7 @@ export default class Players extends Component {
                 </form>
                 :
                 <div>
-
+                
             <button onClick={this.handleToggleNewForm}>Join this court</button>
                 {playersList}
                  </div>

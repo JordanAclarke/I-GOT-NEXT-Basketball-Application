@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import axios from 'axios'
+import {Redirect, Link} from 'react-router-dom'
 export default class SinglePlayer extends Component {
 
     state = {
@@ -21,6 +22,9 @@ export default class SinglePlayer extends Component {
     }
 
     render() {
+        if(this.state.reDirectToHome) {
+            return <Redirect to='/players' />
+        }
         return (
             <div>
 
