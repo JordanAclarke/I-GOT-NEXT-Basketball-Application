@@ -4,7 +4,7 @@
 import React, { Component } from 'react'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
-
+import SingleCourt from './SingleCourt'
 /* Step 2
  * Rename this class to reflect the component being created
  *
@@ -80,6 +80,7 @@ export default class Players extends Component {
                 <Link 
                 key={player._id}
                 to={`/players/${player._id}`}>{player.name}</Link>
+
                 </div>
             )
         })

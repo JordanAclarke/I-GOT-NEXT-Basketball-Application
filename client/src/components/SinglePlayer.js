@@ -12,6 +12,8 @@ export default class SinglePlayer extends Component {
             .then((res) => {
                 this.setState({player: res.data})
             })
+
+        
     }
 
     handleDeletePlayer = () => {

@@ -5,7 +5,8 @@ export default class SingleCourt extends Component {
 state = {
     court: {},
     isEditFormDisplayed: false,
-    reDirectToHome: false
+    reDirectToHome: false,
+    players: []
 
 }
     componentDidMount() {
@@ -13,6 +14,7 @@ state = {
             .then((res) => {
                 this.setState({court: res.data})
             })
+        
     }
 
     handleInputChange =(event) => {
@@ -101,6 +103,10 @@ state = {
                 <button><a href='/courts'>Return To Courts</a></button>
 
                 <h2>Current Players:</h2>
+               
+
+                
+
             </div>
         )
     }
