@@ -129,6 +129,7 @@ export default class Players extends Component {
                 value='Add Player'
                 />
                 </form>
+                
                 :
                 <div>
                 
