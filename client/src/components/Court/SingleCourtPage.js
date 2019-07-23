@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import EditCourtForm from "./EditCourtForm";
+import SinglePlayerPage from "../Player/SinglePlayerPage";
 export default class SingleCourtPage extends Component {
   state = {
     court: {},
@@ -14,10 +15,10 @@ export default class SingleCourtPage extends Component {
       this.setState({ court: res.data });
     });
     axios
-    .get(`/api/courts/${this.props.match.params.courtId}/players`)
-    .then(res => {
-      this.setState({ players: res.data });
-    });
+      .get(`/api/players/byCourtId/${this.props.match.params.courtId}`)
+      .then(res => {
+        this.setState({ players: res.data });
+      });
   }
 
   handleDeleteCourt = () => {
@@ -39,22 +40,20 @@ export default class SingleCourtPage extends Component {
       return <Redirect to="/courts" />;
     }
     let playerArray = this.state.players.map(singlePlayer => {
-        return (
-          <div>
-            
-              <Link to={`/courts/${this.state.court._id}/players`}
-               name={singlePlayer.name}
-               position={singlePlayer.position}
-              ageGroup={singlePlayer.ageGroup}
-              bio={singlePlayer.bio} 
-              >{singlePlayer.name}</Link>
-              {/* position={singlePlayer.position}
-              ageGroup={singlePlayer.ageGroup}
-              bio={singlePlayer.bio} */}
-
-          </div>
-        );
-      });
+      return (
+        <div>
+          <Link
+            to={`/players/${singlePlayer._id}`}
+            name={singlePlayer.name}
+            position={singlePlayer.position}
+            ageGroup={singlePlayer.ageGroup}
+            bio={singlePlayer.bio}
+          >
+            {singlePlayer.name}
+          </Link>
+        </div>
+      );
+    });
     return (
       <div>
         <h1>Single Court:</h1>
@@ -69,9 +68,6 @@ export default class SingleCourtPage extends Component {
         <button>
           <a href="/courts">Return To Courts</a>
         </button>
-
-
-
 
         <h2>Current Players:</h2>
         <div />

@@ -26,7 +26,7 @@ function App() {
           <Route exact path="/courts/:courtId" component={SingleCourtPage} />
           {/* <Route exact path='/courts/:courtId' component={ViewPlayerByCourtId}/> */}
           <Route exact path="/courts/:courtId/edit" component={EditCourtForm} />
-          <Route path="/courts/:courtId/players" component={SinglePlayerPage} />
+          <Route path="/players/:playerId" component={SinglePlayerPage} />
           <Route
             exact
             path="/player/:courtId/create"
