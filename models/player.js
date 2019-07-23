@@ -66,8 +66,8 @@ function addPlayer(playerObject) {
   return PlayerCollection.create(playerObject)
 }
 
-function deletePlayer(courtId) {
-  return PlayerCollection.findByIdAndDelete(courtId)
+function deletePlayer(playerId) {
+  return PlayerCollection.findByIdAndDelete(playerId)
 }
 
 /* Step 5

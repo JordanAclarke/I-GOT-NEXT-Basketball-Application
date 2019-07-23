@@ -30,7 +30,7 @@ export default class CreatePlayerForm extends Component {
 
   addNewPlayer = event => {
     event.preventDefault();
-    axios.post(`/api/courts/${this.props.match.params.courtId}/players`, this.state.newPlayer).then(() => {
+    axios.post(`/api/players/byCourtId/${this.props.match.params.courtId}`, this.state.newPlayer).then(() => {
       this.setState({ reDirectToHome: true });
     });
   };

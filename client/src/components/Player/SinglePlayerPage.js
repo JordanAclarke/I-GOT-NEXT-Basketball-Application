@@ -16,14 +16,14 @@ export default class SinglePlayerPage extends Component {
   }
 
   handleDeletePlayer = () => {
-    axios.delete(`/players/${this.props.match.params.playerId}`).then(() => {
+    axios.delete(`/api/players/${this.props.match.params.playerId}`).then(() => {
       this.setState({ reDirectToHome: true });
     });
   };
 
   render() {
     if (this.state.reDirectToHome) {
-        return <Redirect to={`/courts/${this.props.match.params.courtId}`}/>;
+        return <Redirect to={`/courts`}/>;
       }
     return (
       <div>

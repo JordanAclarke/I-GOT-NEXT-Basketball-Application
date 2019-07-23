@@ -52,7 +52,7 @@ playerRouter.get('/:playerId', (req, res) => {
   })
 })
 
-playerRouter.get('/:courtId', (req, res) => {
+playerRouter.get('/byCourtId/:courtId', (req, res) => {
   playerApi.getPlayersByCourtId(req.params.courtId)
   .then((player) => {
     res.json(player)
@@ -63,7 +63,7 @@ playerRouter.get('/:courtId', (req, res) => {
   
 // })
 
-playerRouter.post('/', (req, res) => {
+playerRouter.post('/byCourtId/:courtId', (req, res) => {
   // let courtId = req.params.courtId
 
   playerApi.addPlayer(req.body)
@@ -79,6 +79,9 @@ playerRouter.delete('/:playerId', (req, res) => {
   playerApi.deletePlayer(req.params.playerId)
   .then((deletedPlayer) => {
     res.json(deletedPlayer)
+  })
+  .catch((err) => {
+    console.log(err)
   })
 })
 /* Step 6

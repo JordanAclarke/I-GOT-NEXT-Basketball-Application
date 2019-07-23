@@ -1,7 +1,7 @@
 /* Step 1 import express
  *
  */
-const express = require('express')
+const express = require("express");
 
 /* Step 2
  *
@@ -11,69 +11,66 @@ const express = require('express')
  * TODO: rename this from `templateApi` to something more sensible (e.g:
  * `shopsAPI`)
  *
- * NOTE: You may need to import more than one API to create the 
+ * NOTE: You may need to import more than one API to create the
  * controller you need.
- * 
+ *
  */
-const courtApi = require('../models/court.js')
+const courtApi = require("../models/court.js");
 
-/* Step 3 
- * 
+/* Step 3
+ *
  * Create a new router.
  *
  * the router will "contain" all the request handlers that you define in this file.
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const courtRouter = express.Router()
+const courtRouter = express.Router();
 
 /* Step 4
- * 
+ *
  * TODO: Put all request handlers here
  */
 
 /* Step 5
  *
  * TODO: delete this handler; it's just a sample
- */ 
+ */
 
-courtRouter.get('/', (req, res) => {
-  courtApi.getAllCourts()
-    .then((courts) => {
-      res.json(courts)
-    })
-})
+courtRouter.get("/", (req, res) => {
+  courtApi.getAllCourts().then(courts => {
+    res.json(courts);
+  });
+});
 
-courtRouter.get('/:courtId', (req, res) => {
-  courtApi.getCourt(req.params.courtId)
-    .then((court) => {
-      res.json(court)
+courtRouter.get("/:courtId", (req, res) => {
+  courtApi
+    .getCourt(req.params.courtId)
+    .then(court => {
+      res.json(court);
     })
-    .catch((err) => {
-      console.log(err)
-    })
-})
+    .catch(err => {
+      console.log(err);
+    });
+});
 
-courtRouter.post('/', (req, res) => {
-  courtApi.addNewCourt(req.body)
-    .then((court) => {
-      res.json(court)
-    })
-})
+courtRouter.post("/", (req, res) => {
+  courtApi.addNewCourt(req.body).then(court => {
+    res.json(court);
+  });
+});
 
-courtRouter.put('/:courtId', (req, res) => {
-  courtApi.updateCourt(req.params.courtId, req.body)
-    .then((updatedCourt) => {
-      res.json(updatedCourt)
-    })
-})
+courtRouter.put("/:courtId", (req, res) => {
+  courtApi.updateCourt(req.params.courtId, req.body).then(updatedCourt => {
+    res.json(updatedCourt);
+  });
+});
 
-courtRouter.delete('/:courtId', (req, res) => {
-  courtApi.deleteCourt(req.params.courtId)
-    .then((deletedCourt) => {
-      res.json(deletedCourt)
-    })
-})
+courtRouter.delete("/:courtId", (req, res) => {
+  courtApi.deleteCourt(req.params.courtId).then(deletedCourt => {
+    res.json(deletedCourt);
+  });
+});
 
 /* Step 6
  *
@@ -82,4 +79,4 @@ courtRouter.delete('/:courtId', (req, res) => {
  */
 module.exports = {
   courtRouter
-}
+};
