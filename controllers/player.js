@@ -17,6 +17,7 @@ const express = require('express')
  */
 const playerApi = require('../models/player.js')
 
+const courtApi = require('../models/court.js')
 /* Step 3 
  * 
  * Create a new router.
@@ -25,7 +26,7 @@ const playerApi = require('../models/player.js')
  * TODO: rename this from templateRouter to something that makes sense. (e.g:
  * `shopRouter`)
  */
-const playerRouter = express.Router()
+const playerRouter = express.Router({mergeParams: true})
 
 /* Step 4
  * 
@@ -37,7 +38,8 @@ const playerRouter = express.Router()
  * TODO: delete this handler; it's just a sample
  */ 
 playerRouter.get('/', (req, res) => {
-  playerApi.getAllPlayers()
+  let courtId = req.params.courtId
+  playerApi.getPlayersByCourtId(courtId)
   .then((players) => {
     res.json(players)
   })
@@ -50,10 +52,26 @@ playerRouter.get('/:playerId', (req, res) => {
   })
 })
 
+playerRouter.get('/:courtId', (req, res) => {
+  playerApi.getPlayersByCourtId(req.params.courtId)
+  .then((player) => {
+    res.json(player)
+  })
+})
+
+// playerRouter.get('/:courtId', (req, res) => {
+  
+// })
+
 playerRouter.post('/', (req, res) => {
+  // let courtId = req.params.courtId
+
   playerApi.addPlayer(req.body)
   .then((player) => {
     res.json(player)
+  })
+  .catch((err) => {
+    console.log(err)
   })
 })
 

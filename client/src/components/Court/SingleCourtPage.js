@@ -6,7 +6,8 @@ export default class SingleCourtPage extends Component {
 
     state = {
         court: {},
-        reDirectToHome: false
+        reDirectToHome: false,
+        players: []
     }
 
     componentDidMount() {
@@ -14,6 +15,7 @@ export default class SingleCourtPage extends Component {
             .then((res) => {
                 this.setState({court: res.data})
             })
+
     }
 
     
@@ -23,11 +25,35 @@ export default class SingleCourtPage extends Component {
                 this.setState({reDirectToHome: true})
             })
     }
+
+    //Players Component
+
+    getAllPlayers() {
+        axios.get(`/api/courts/${this.state.court._id}`)
+            .then((res) => {
+                this.setState({players: res.data})
+            })
+    }
+
+
         
     render() {
         if(this.state.reDirectToHome) {
             return <Redirect to='/courts' />
         }
+
+        let playerList = this.state.players.map((player) => {
+            return (
+                <Link
+                id={player._id}
+                to={`/players/${player._id}`}>{player.name}
+                >
+                </Link>
+                
+
+                
+            )
+        })
         return (
             <div>
                 
@@ -39,7 +65,14 @@ export default class SingleCourtPage extends Component {
                 <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
                 <p>Entry Price: {this.state.court.entryPrice}</p>
                 <button><a href='/courts'>Return To Courts</a></button>
-                
+
+                <h2>Current Players:</h2>
+                {playerList}
+                <div>
+                <Link to={`/player/${this.state.court._id}/create`}>Create A Player</Link>
+                </div>
+                <Link to={`/player`}>View Player</Link>
+                <h2>{this.state.players.name}</h2>
 
                 
 

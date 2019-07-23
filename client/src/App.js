@@ -9,6 +9,10 @@ import Home from './components/Home'
 import './App.css';
 import Players from './components/Players'
 import SinglePlayer from './components/SinglePlayer';
+import ViewPlayerByCourtId from './components/Player/ViewPlayerByCourtId';
+import SinglePlayerPage from './components/Player/SinglePlayerPage'
+import CreatePlayerForm from './components/Player/CreatePlayerForm'
+import EditPlayerForm from './components/Player/EditPlayerForm'
 
 function App() {
   return (
@@ -19,11 +23,13 @@ function App() {
           <Route exact path="/courts" component={AllCourtsPage}/>
           <Route exact path="/courts/create" component={CreateCourtForm}/>
           <Route exact path='/courts/:courtId' component={SingleCourtPage}/>
+          {/* <Route exact path='/courts/:courtId' component={ViewPlayerByCourtId}/> */}
           <Route exact path="/courts/:courtId/edit" component={EditCourtForm}/> 
 
-          {/* <Route exact path='/player/:courtId/create' component={CreateCourtForm} />
-          <Route exact path='/player/edit/:playerId' component={EditCourtForm} />
-          <Route path='/player/:playerId' component={SinglePlayerPage} /> */} */}
+          <Route path='/players' component={SinglePlayerPage} /> 
+          <Route exact path='/player/:courtId/create' component={CreatePlayerForm} />
+          <Route exact path='/player/edit/:playerId' component={EditPlayerForm} />
+          
         </Switch>
       </Router>
     </div>

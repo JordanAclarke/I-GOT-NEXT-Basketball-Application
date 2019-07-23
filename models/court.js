@@ -30,7 +30,11 @@ const CourtSchema = new mongoose.Schema({
  gymName: String,
  address: String,
  numberOfPlayers: String,
- entryPrice: String
+ entryPrice: String,
+//  players: [{
+//    type: mongoose.Schema.Types.ObjectId,
+//    ref: "Player"
+//  }]
 })
 
 /* Step 3
@@ -49,9 +53,12 @@ const CourtCollection = mongoose.model('Court', CourtSchema)
 function getAllCourts() {
   return CourtCollection.find()
 }
+function getAllPlayers() {
+  return CourtCollection.find()
+}
 
 function getCourt(courtId) {
-  return CourtCollection.findById(courtId)
+  return CourtCollection.findById(courtId).populate('players')
 }
 
 function addNewCourt(courtObject) {

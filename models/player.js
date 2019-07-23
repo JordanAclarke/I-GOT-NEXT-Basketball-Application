@@ -31,6 +31,10 @@ const PlayerSchema = new mongoose.Schema({
  ageGroup: String,
  positon: String,
  bio: String,
+ courtId: {
+   type: mongoose.Schema.Types.ObjectId,
+   required: true
+ }
 })
 
 /* Step 3
@@ -54,7 +58,7 @@ function getPlayer(playerId) {
   return PlayerCollection.findById(playerId)
 }
 
-function getPlayerByCourtId(courtId) {
+function getPlayersByCourtId(courtId) {
   return PlayerCollection.find({courtId})
 }
 
@@ -74,7 +78,7 @@ function deletePlayer(courtId) {
 module.exports = {
   getAllPlayers,
   getPlayer,
-  getPlayerByCourtId,
+  getPlayersByCourtId,
   addPlayer,
   deletePlayer
 }
