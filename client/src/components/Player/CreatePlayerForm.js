@@ -43,7 +43,9 @@ export default class CreatePlayerForm extends Component {
     return (
       
       <div>
+        
         <form onSubmit={this.addNewPlayer}>
+          <div>
           <label htmlFor="player-name">Player Name:</label>
           <input
             type="text"
@@ -52,7 +54,9 @@ export default class CreatePlayerForm extends Component {
             onChange={this.handleInputChange}
             value={this.state.newPlayer.name}
           />
-
+          </div>
+          
+          <div>
           <label htmlFor="player-age-group">Age-Group:</label>
           <input
             type="text"
@@ -61,7 +65,9 @@ export default class CreatePlayerForm extends Component {
             onChange={this.handleInputChange}
             value={this.state.newPlayer.ageGroup}
           />
+          </div>
 
+          <div>
           <label htmlFor="player-position">Position:</label>
           <input
             type="text"
@@ -70,7 +76,9 @@ export default class CreatePlayerForm extends Component {
             onChange={this.handleInputChange}
             value={this.state.newPlayer.position}
           />
+          </div>
 
+          <div>
           <label htmlFor="player-bio">Biography:</label>
           <input
             type="text"
@@ -79,8 +87,12 @@ export default class CreatePlayerForm extends Component {
             onChange={this.handleInputChange}
             value={this.state.newPlayer.bio}
           />
+
+          </div>
+
           <input type="submit" value="Add Player" />
         </form>
+        
       </div>
   
     );

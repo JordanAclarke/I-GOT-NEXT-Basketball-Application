@@ -29,7 +29,7 @@ export default class SinglePlayerPage extends Component {
       <div>
         <h1>Hello</h1>
         <h2>{this.state.player.name}</h2>
-        <h3>{this.state.player.position}</h3>
+        <p>{this.state.player.position}</p>
         <p>{this.state.player.ageGroup}</p>
         <p>{this.state.player.bio}</p>
 

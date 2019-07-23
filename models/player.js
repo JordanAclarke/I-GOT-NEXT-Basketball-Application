@@ -29,7 +29,7 @@ const mongoose = require('./connection.js')
 const PlayerSchema = new mongoose.Schema({
  name: String,
  ageGroup: String,
- positon: String,
+ position: String,
  bio: String,
  courtId: {
    type: mongoose.Schema.Types.ObjectId,

@@ -76,6 +76,7 @@ export default class SingleCourtPage extends Component {
         </Link>
         <h2>View Players:</h2>
         {playerArray}
+        <h1></h1>
       </div>
     );
   }
