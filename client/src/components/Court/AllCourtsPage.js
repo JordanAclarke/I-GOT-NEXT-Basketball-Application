@@ -43,12 +43,13 @@ export default class AllCourtsPage extends Component {
         })
         return (
             <div>
-                <h1>Open Courts:</h1>
-                <div>
-                <Link to='/'>Return Home</Link>
+                <h1>Open Courts/Parks:</h1>
+                <div className='link'>
+                <Link to='/'><h2>Return Home</h2></Link>
+                
+                <Link to={`/courts/create`}><h2>Create A Court</h2></Link>
                 </div>
-                <Link to={`/courts/create`}>Create A Court</Link>
-                {courtsList}
+                <h2>{courtsList}</h2>
             </div>
         )
     }

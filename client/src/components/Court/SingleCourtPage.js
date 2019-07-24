@@ -49,7 +49,7 @@ export default class SingleCourtPage extends Component {
             ageGroup={singlePlayer.ageGroup}
             bio={singlePlayer.bio}
           >
-            {singlePlayer.name}
+            <h3>{singlePlayer.name}</h3>
           </Link>
         </div>
       );
@@ -57,24 +57,26 @@ export default class SingleCourtPage extends Component {
     return (
       <div>
         <h1>Single Court:</h1>
+        <div>
         <Link to={`/courts/${this.state.court._id}/edit`}>
-          Edit Court Details{" "}
+          <h2>Edit Court Details{" "}</h2>
         </Link>
-        <button onClick={this.handleDeleteCourt}>Delete Court</button>
-        <h2> {this.state.court.gymName}</h2>
+        </div>
+        
+        <h2>{this.state.court.gymName} </h2>
         <h3> Address: {this.state.court.address}</h3>
         <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
         <p>Entry Price: {this.state.court.entryPrice}</p>
-        <button>
-          <a href="/courts">Return To Courts</a>
-        </button>
-
-        <h2>Current Players:</h2>
+          <Link to="/courts"><h2>Return To Courts</h2></Link>
+      
+        <button onClick={this.handleDeleteCourt}>Delete Court</button>
         <div />
+        <br></br>
+        <br></br>
         <Link to={`/player/${this.state.court._id}/create`}>
-          Create A Player
+          <h2>Create A Player</h2>
         </Link>
-        <h2>View Players:</h2>
+        <h2>View Players Signed Up To Play:</h2>
         {playerArray}
         <h1></h1>
       </div>

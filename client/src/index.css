@@ -44,7 +44,7 @@ form {
   transform: translate(-50%, -50%)
 }
 #home-page {
-  font-family: 'Butcherman', cursive;
+  font-family: 'Fascinate', cursive;
   font-size: 87px;
   
 }
@@ -82,4 +82,12 @@ hr {
   0%{transform: translateY(0px);}
   50%{transform: translateY(-125px)}
   100%{transform: translateY(0px)}
+}
+
+h1, h2 {
+  font-family: 'Fascinate', cursive;
+}
+
+h3 {
+  font-family: 'Londrina Shadow', cursive;
 }
