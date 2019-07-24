@@ -27,11 +27,11 @@ export default class SinglePlayerPage extends Component {
       }
     return (
       <div>
-        <h1>Hello</h1>
+        <h1>Hello, I'm</h1>
         <h2>{this.state.player.name}</h2>
-        <p>{this.state.player.position}</p>
-        <p>{this.state.player.ageGroup}</p>
-        <p>{this.state.player.bio}</p>
+        <p>I Play {this.state.player.position}</p>
+        <p>Age: {this.state.player.ageGroup}</p>
+        <p>Bio: {this.state.player.bio}</p>
 
         <button onClick={this.handleDeletePlayer}>Delete Player</button>
       </div>

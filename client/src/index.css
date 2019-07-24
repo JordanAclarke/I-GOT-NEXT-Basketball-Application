@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FDF5E6;
+  background: grey;
 }
 
 code {
@@ -67,7 +67,7 @@ form {
   /* border-radius: 100%;
   background: orangered; */
   margin: 0 auto;
-  margin-right: 50px;
+  margin-right: 10px;
   padding: 0;
   animation: heyjump .5s infinite;
   font-size: 75px;
@@ -80,7 +80,7 @@ hr {
 
 @keyframes heyjump{ 
   0%{transform: translateY(0px);}
-  50%{transform: translateY(-125px)}
+  50%{transform: translateY(-135px)}
   100%{transform: translateY(0px)}
 }
 
@@ -91,3 +91,7 @@ h1, h2 {
 h3 {
   font-family: 'Londrina Shadow', cursive;
 }
+#align {
+  visibility: hidden;
+}
+
