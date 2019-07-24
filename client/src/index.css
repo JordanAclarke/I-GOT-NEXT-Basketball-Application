@@ -67,9 +67,9 @@ form {
   /* border-radius: 100%;
   background: orangered; */
   margin: 0 auto;
-  margin-right: 10px;
+  margin-right: 30px;
   padding: 0;
-  animation: heyjump .5s infinite;
+  animation: heyjump .7s infinite;
   font-size: 75px;
 }
 

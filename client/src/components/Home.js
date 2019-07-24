@@ -11,6 +11,10 @@ export default class Home extends Component {
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
                 </div>
+
+      {/* <video width='750' height='500' controls>
+        <source src='../public/basketball.mp4' type='video/mp4' />
+      </video> */}
   <Link to='/courts'>
   <Carousel>
   <Carousel.Item>
