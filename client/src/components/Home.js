@@ -5,7 +5,12 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <h1>I G🏀T NE⛓️T </h1>
+                <h1 id='home-page'>I GOT NEXT <img src='https://previews.123rf.com/images/rastudio/rastudio1505/rastudio150502508/40451226-basketball-hoop-icon-thin-line-for-web-and-mobile-modern-minimalistic-flat-design-vector-dark-grey-i.jpg' height='97' ></img> ⛓</h1>
+            
+                <div className='wrapper'>
+                    <div className='jumping-ball'>🏀 </div>
+                    <hr></hr>
+                </div>
   <Link to='/courts'>
   <Carousel>
   <Carousel.Item>

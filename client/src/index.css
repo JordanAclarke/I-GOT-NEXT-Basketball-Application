@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: grey;
+  background: #FDF5E6;
 }
 
 code {
@@ -43,4 +43,43 @@ form {
   top: 50%;
   transform: translate(-50%, -50%)
 }
+#home-page {
+  font-family: 'Butcherman', cursive;
+  font-size: 87px;
+  
+}
 
+/* Test */
+
+#ball {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 75px;
+}
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+
+}
+
+.jumping-ball {
+  width: 50px;
+  height: 50px;
+  /* border-radius: 100%;
+  background: orangered; */
+  margin: 0 auto;
+  margin-right: 50px;
+  padding: 0;
+  animation: heyjump .5s infinite;
+  font-size: 75px;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes heyjump{ 
+  0%{transform: translateY(0px);}
+  50%{transform: translateY(-125px)}
+  100%{transform: translateY(0px)}
+}
