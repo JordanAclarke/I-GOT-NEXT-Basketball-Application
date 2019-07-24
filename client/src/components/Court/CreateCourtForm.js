@@ -38,6 +38,7 @@ export default class CreateCourtForm extends Component {
     }
     return (
       <div>
+        <div class='form-wrap'>
         <form onSubmit={this.addNewCourt}>
           <label htmlFor="court-gym-name">Court Name</label>
           <input
@@ -77,6 +78,7 @@ export default class CreateCourtForm extends Component {
 
           <input type="submit" value="Create Court" />
         </form>
+        </div>
       </div>
     );
   }
