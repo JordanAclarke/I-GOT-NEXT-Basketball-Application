@@ -5,17 +5,28 @@ export default class Home extends Component {
     render() {
         return (
             <div>
-                <h1 id='home-page'>I GOT NEXT <img id='align' src='https://via.placeholder.com/350x150' height='97' width='95'></img>⛓️ </h1>
+                {/* <h1 id='home-page'>I GOT NEXT <img id='align' src='https://via.placeholder.com/350x150' height='97' width='95'></img>⛓️ </h1>
             
                 <div className='wrapper'>
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
-                </div>
+                </div> */}
+<Link to='/courts'>
+ <div className='section'> 
 
-      {/* <video width='750' height='500' controls>
-        <source src='../public/basketball.mp4' type='video/mp4' />
-      </video> */}
-  <Link to='/courts'>
+      <h1 class='name'>I Got Next</h1>
+      
+      <div className='color-overlay'></div>
+      <div className='video-container'> 
+      <video autoplay='true' loop='true'>
+        <source src='basketball.mp4' type='video/mp4' />
+      </video>
+      </div>
+      
+  </div>
+  </Link>
+    
+  {/* <Link to='/courts'>
   <Carousel>
   <Carousel.Item>
     <img
@@ -69,7 +80,7 @@ export default class Home extends Component {
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
-</Link>
+</Link> */}
             </div>
         )
     }
