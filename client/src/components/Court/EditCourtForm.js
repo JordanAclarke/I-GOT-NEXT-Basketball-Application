@@ -34,7 +34,7 @@ state = {
         }
         return (
             <div>
-                <h1>Hello:</h1>
+                <h1>Please Fill Out All Details:</h1>
                 <form onSubmit={this.handleSubmit}>
                 <label htmlFor='court-gym-name'>Court Name</label>
                 <input

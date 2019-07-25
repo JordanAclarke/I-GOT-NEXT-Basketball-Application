@@ -75,6 +75,7 @@ export default class CreateCourtForm extends Component {
             onChange={this.handleNewCourt}
             value={this.state.newCourt.entryPrice}
           />
+  
 
           <input type="submit" value="Create Court" />
         </form>

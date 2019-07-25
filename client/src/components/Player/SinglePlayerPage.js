@@ -23,7 +23,7 @@ export default class SinglePlayerPage extends Component {
 
   render() {
     if (this.state.reDirectToHome) {
-        return <Redirect to={`/courts`}/>;
+        return <Redirect to={`/courts/${this.state.player.courtId}`}/>;
       }
     return (
       <div>

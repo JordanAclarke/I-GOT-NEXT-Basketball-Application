@@ -44,6 +44,13 @@ export default class AllCourtsPage extends Component {
         })
         return (
             <div>
+               <Navbar style={{textAlign: "center"}} variant="dark">
+    <Navbar.Brand href="#home">I Got Next</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/courts">Courts</Nav.Link>
+    </Nav>
+  </Navbar>
                 {/* <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="/">I-Got-Next</Navbar.Brand>
     <Nav className="mr-auto">
@@ -57,6 +64,14 @@ export default class AllCourtsPage extends Component {
             <br></br>
        
                 <div className='wrapper'>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
+                    <div className='jumping-ball'>🏀 </div>
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
                 </div>

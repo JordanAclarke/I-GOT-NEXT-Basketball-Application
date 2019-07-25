@@ -3,7 +3,7 @@ import axios from "axios";
 import { Redirect, Link } from "react-router-dom";
 import EditCourtForm from "./EditCourtForm";
 import SinglePlayerPage from "../Player/SinglePlayerPage";
-import { Card, Button } from "react-bootstrap";
+import { Card, Button, Nav, Navbar } from "react-bootstrap";
 export default class SingleCourtPage extends Component {
   state = {
     court: {},
@@ -47,10 +47,10 @@ export default class SingleCourtPage extends Component {
             <Card
               style={{ width: "17rem"}}
             >
-              <Card.Img variant="top" src="../dribble.gif" />
+              <Card.Img variant="top" src="../dribble.gif"/>
               <Card.Body>
                 <Card.Title>{singlePlayer.name}</Card.Title>
-                <Card.Text>{singlePlayer.bio}</Card.Text>
+                <Card.Text>{singlePlayer.position}</Card.Text>
                 <Link to={`/players/${singlePlayer._id}`}>View Player</Link>
               </Card.Body>
             </Card>
@@ -63,15 +63,20 @@ export default class SingleCourtPage extends Component {
     });
     return (
       <div>
+         <Navbar style={{textAlign: "center", display: 'flex', alignContent: 'flexEnd'}} variant="dark">
+    <Navbar.Brand href="#home">I Got Next</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="/">Home</Nav.Link>
+      <Nav.Link href="/courts">Courts</Nav.Link>
+    </Nav>
+  </Navbar>
+  <br />
         <div id='background'>
-        <h1>Single Court:</h1>
-        <Link id="text" to="/courts">
-          <h2>Return To All Courts</h2>
-        </Link>
+       
 
         <div className="court-details">
-          <h2>Court Name:{this.state.court.gymName} </h2>
-          <h3> Address: {this.state.court.address}</h3>
+          <h1>{this.state.court.gymName} </h1>
+          <h2> Address: {this.state.court.address}</h2>
           <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
           <p>Entry Price: ${this.state.court.entryPrice}</p>
         </div>
