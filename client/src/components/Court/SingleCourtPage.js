@@ -75,10 +75,13 @@ export default class SingleCourtPage extends Component {
        
 
         <div className="court-details">
+        <img className='image' src={this.state.court.imgLink} placeholder='' height='100' width='100' />
           <h1>{this.state.court.gymName} </h1>
           <h2> Address: {this.state.court.address}</h2>
+          <p>Meetup-Date: {this.state.court.date}</p>
           <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
           <p>Entry Price: ${this.state.court.entryPrice}</p>
+          
         </div>
       </div>
         <div className="buttons">

@@ -45,6 +45,15 @@ state = {
                 value={this.state.court.gymName}
                 />
 
+                <label htmlFor='court-img-link'>Picture Of Court:</label>
+                <input
+                type='text'
+                id='court-img-link'
+                name='imgLink'
+                onChange={this. handleEditInputChange}
+                value={this.state.court.imgLink}
+                />
+
                 <label htmlFor='court-address'>Address:</label>
                 <input
                 type='text'
@@ -71,6 +80,12 @@ state = {
                 onChange={this. handleEditInputChange}
                 value={this.state.court.entryPrice}
                 />
+
+                    <label htmlFor='date'>Date:</label>
+                    <input type="date" name="date" 
+                     onChange={this. handleEditInputChange}
+                     value={this.state.court.date}
+                    />
 
                 <input type='submit' value='Update Court Details' />
             </form>

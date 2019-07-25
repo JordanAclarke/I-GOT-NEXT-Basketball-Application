@@ -31,6 +31,8 @@ const CourtSchema = new mongoose.Schema({
  address: String,
  numberOfPlayers: String,
  entryPrice: String,
+ imgLink: String,
+ date: String
 //  players: [{
 //    type: mongoose.Schema.Types.ObjectId,
 //    ref: "Player"
