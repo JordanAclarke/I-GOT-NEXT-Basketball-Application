@@ -19,7 +19,7 @@ export default class Home extends Component {
       <div className='color-overlay'></div>
       <div className='video-container'> 
       <video playsinline='true' autoplay='true' muted='true' loop='true'>
-        <source src='basketball.mp4' type='video/mp4' />
+        <source src='reverse.mp4' type='video/mp4' />
       </video>
       </div>
       

@@ -61,6 +61,7 @@ export default class AllCourtsPage extends Component {
                     <hr></hr>
                 </div>
                 <h1>Open Courts/Parks:</h1>
+             
                 <div className='link'>
                 <Link to='/' id='text'><h2>Return Home</h2></Link>
                 
@@ -68,6 +69,7 @@ export default class AllCourtsPage extends Component {
                 </div>
                 <h2>{courtsList}</h2>
 
+ 
 
                 
   <Carousel>
@@ -77,7 +79,7 @@ export default class AllCourtsPage extends Component {
       src="http://sfwallpaper.com/images/basketball-court-hd-wallpapers-1.jpg"
       alt="First slide"
       height="600"
-     width="1000"
+     width="1500"
     />
     <Carousel.Caption>
       
@@ -89,7 +91,7 @@ export default class AllCourtsPage extends Component {
       src="https://www.downtownmagazinenyc.com/wp-content/uploads/2018/03/SA13-Basketball_revG.jpg"
       alt="Third slide"
       height="600"
-     width="1000"
+     width="1500"
     />
 
     <Carousel.Caption>
@@ -102,7 +104,7 @@ export default class AllCourtsPage extends Component {
       src="https://www.faburous.com/wp-content/uploads/2015/05/Small-basement-court.jpg"
       alt="Third slide"
       height="600"
-     width="1000"
+     width="1500"
     />
 
     <Carousel.Caption>
@@ -116,7 +118,7 @@ export default class AllCourtsPage extends Component {
       src="https://static2.mansionglobal.com/production/media/article-images/fd9fbab54ecce5120170b249ef89791d/large_Sky_Basketball_Court.jpg?width=620&height=413"
       alt="First slide"
       height="600"
-     width="1000"
+      width="1500"
     />
     <Carousel.Caption>
       

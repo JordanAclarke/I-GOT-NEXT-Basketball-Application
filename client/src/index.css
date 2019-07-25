@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: grey;
+  background: lightgray;
 }
 
 code {
@@ -91,7 +91,7 @@ hr {
 }
 
 h1 {
-  /* font-family: 'Fascinate', cursive; */
+  font-family: 'Fascinate', cursive;
   text-align: center;
 }
 
@@ -112,7 +112,7 @@ h1 {
 .section h1 {
   text-align: center;
   font-size: 6rem;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Fascinate", cursive;
   padding: 10px;
   margin: 15px;
   z-index: 10;
@@ -139,17 +139,19 @@ h1 {
 .name {
   position: relative;
   top: 4em;
-  font-family: "Fascinate", cursive;
+  
 }
 
 #text {
   color: orangered;
+  text-decoration: underline;
 }
 
 .court-details {
   display: flex;
   text-align: center;
   flex-direction: column;
+  
 }
 .buttons {
   display: inline;
@@ -166,3 +168,10 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
+/* #background {
+  background: url('./giphy.gif');
+} */
+/* .carousel {
+  width: 2000p
+} */

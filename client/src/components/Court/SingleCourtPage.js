@@ -63,17 +63,19 @@ export default class SingleCourtPage extends Component {
     });
     return (
       <div>
+        <div id='background'>
         <h1>Single Court:</h1>
         <Link id="text" to="/courts">
-          <h2>Return To Courts</h2>
+          <h2>Return To All Courts</h2>
         </Link>
 
         <div className="court-details">
-          <h2>{this.state.court.gymName} </h2>
+          <h2>Court Name:{this.state.court.gymName} </h2>
           <h3> Address: {this.state.court.address}</h3>
           <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
-          <p>Entry Price: {this.state.court.entryPrice}</p>
+          <p>Entry Price: ${this.state.court.entryPrice}</p>
         </div>
+      </div>
         <div className="buttons">
           <Link id="text" to={`/courts/${this.state.court._id}/edit`}>
             <Button variant="success">Edit Court Details </Button>
@@ -84,6 +86,8 @@ export default class SingleCourtPage extends Component {
         </div>
         <br />
         <br />
+        <br />
+        <hr />
 
         <h2>View Players Signed Up To Play:</h2>
         <Link to={`/player/${this.state.court._id}/create`}>
