@@ -11,14 +11,14 @@ export default class Home extends Component {
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
                 </div> */}
-<Link to='/courts'>
+<Link to='/courts' id='text'>
  <div className='section'> 
 
       <h1 class='name'>I Got Next</h1>
       
       <div className='color-overlay'></div>
       <div className='video-container'> 
-      <video autoplay='true' loop='true'>
+      <video playsinline='true' autoplay='true' muted='true' loop='true'>
         <source src='basketball.mp4' type='video/mp4' />
       </video>
       </div>
