@@ -16,7 +16,6 @@ code {
 #title {
   font-size: 77px;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 /* Test */
 
@@ -41,24 +40,22 @@ form {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%)
+  transform: translate(-50%, -50%);
 }
 #home-page {
-  font-family: 'Fascinate', cursive;
+  font-family: "Fascinate", cursive;
   font-size: 87px;
-  
 }
 
 /* Test */
 
 #ball {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 75px;
 }
 .wrapper {
   width: 500px;
   margin: 0 auto;
-
 }
 
 .jumping-ball {
@@ -68,7 +65,11 @@ form {
   background: orangered; */
   margin: 0 auto;
   padding: 0;
-  animation: heyjump .7s infinite;
+  animation: heyjump 0.7s infinite;
+  font-size: 100px;
+}
+
+.hands {
   font-size: 100px;
 }
 
@@ -77,19 +78,23 @@ hr {
   padding: 0;
 }
 
-@keyframes heyjump{ 
-  0%{transform: translateY(0px);}
-  50%{transform: translateY(-130px)}
-  100%{transform: translateY(0px)}
+@keyframes heyjump {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-130px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-h1, h2 {
-  font-family: 'Fascinate', cursive;
+h1 {
+  /* font-family: 'Fascinate', cursive; */
+  text-align: center;
 }
 
-h3 {
-  font-family: 'Londrina Shadow', cursive;
-}
 #align {
   visibility: hidden;
 }
@@ -107,11 +112,11 @@ h3 {
 .section h1 {
   text-align: center;
   font-size: 6rem;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 10px;
   margin: 15px;
   z-index: 10;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 
 .video-container {
@@ -134,8 +139,30 @@ h3 {
 .name {
   position: relative;
   top: 4em;
+  font-family: "Fascinate", cursive;
 }
 
-.text, .name {
-  color:orangered;
+#text {
+  color: orangered;
+}
+
+.court-details {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.buttons {
+  display: inline;
+}
+
+/* .jersey {
+  display: inline;
+} */
+
+.player-list-conatiner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }

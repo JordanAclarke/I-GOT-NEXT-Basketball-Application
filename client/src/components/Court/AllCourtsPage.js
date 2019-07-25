@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import CreateCourtForm from './CreateCourtForm'
-import {Carousel} from 'react-bootstrap'
+import {Carousel, Nav, Navbar} from 'react-bootstrap'
 export default class AllCourtsPage extends Component {
 
     state = {
@@ -30,6 +30,7 @@ export default class AllCourtsPage extends Component {
             return (
                 <div>
                 <Link 
+                id='text'
                 key={court._id}
                 to={`/courts/${court._id}`}
                 >
@@ -43,20 +44,27 @@ export default class AllCourtsPage extends Component {
         })
         return (
             <div>
-                
+                {/* <Navbar bg="dark" variant="dark">
+    <Navbar.Brand href="/">I-Got-Next</Navbar.Brand>
+    <Nav className="mr-auto">
+      <Nav.Link href="/">Home</Nav.Link>
+     
+    </Nav>
+  </Navbar> */}
+            
+             {/* <br></br> */}
+            <br></br> 
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+       
                 <div className='wrapper'>
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
                 </div>
                 <h1>Open Courts/Parks:</h1>
                 <div className='link'>
-                <Link to='/'><h2>Return Home</h2></Link>
+                <Link to='/' id='text'><h2>Return Home</h2></Link>
                 
-                <Link to={`/courts/create`}><h2>Create A Court</h2></Link>
+                <Link to={`/courts/create`} id='text'><h2>Create A Court</h2></Link>
                 </div>
                 <h2>{courtsList}</h2>
 
@@ -72,7 +80,7 @@ export default class AllCourtsPage extends Component {
      width="1000"
     />
     <Carousel.Caption>
-      <h3>Click To Join</h3>
+      
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -85,7 +93,7 @@ export default class AllCourtsPage extends Component {
     />
 
     <Carousel.Caption>
-    <h3>Click To Join</h3>
+    
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -98,7 +106,7 @@ export default class AllCourtsPage extends Component {
     />
 
     <Carousel.Caption>
-    <h3>Click To Join</h3>
+    
     </Carousel.Caption>
   </Carousel.Item>
 
@@ -111,7 +119,7 @@ export default class AllCourtsPage extends Component {
      width="1000"
     />
     <Carousel.Caption>
-      <h3>Click To Join</h3>
+      
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>
