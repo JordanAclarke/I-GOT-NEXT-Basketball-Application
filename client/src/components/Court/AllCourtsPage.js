@@ -34,9 +34,13 @@ export default class AllCourtsPage extends Component {
                 key={court._id}
                 to={`/courts/${court._id}`}
                 >
+                 <div className='chip'>
+                   <img src='giphy.gif' width='96' height='96' />
                 {court.gymName}
+                </div>
+               
                 </Link>
-
+                
             
                 </div>
 
@@ -73,6 +77,7 @@ export default class AllCourtsPage extends Component {
                 
                 <Link to={`/courts/create`} id='text'><Button style={{background: '#FA8320', borderColor: '#FA8320'}} variant="success">Create A Court</Button></Link>
                 </div>
+                <br />
                 <h2>{courtsList}</h2>
 
  
