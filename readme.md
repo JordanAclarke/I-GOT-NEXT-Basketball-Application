@@ -1,31 +1,28 @@
-# mern-template-project
+# I-Got-Next !!
 
-# Setup A New Project From This Template
+For Project Three, I created a basketball meetup app. This app will allow players to post a court they're going to play at. Players can also see other current courts and add themself to that court. The players will display at the bottom of the court page so that other players can see who's going on that day.  
 
-If you are starting a new project do the following:
+##Project Links
+[Trello](https://trello.com/b/SDqnrTU7/jordan-clarke-project-3-board)
+[I-Got-Next](https://i-got-next.herokuapp.com/)
 
-1. copy/download this directory to where you new project is located and rename
-   it to the name of your project.
-1. change your directory (`cd`) into the copied project template
-1. `npm install`
-1. `npm run dev`
-1. Open a new browser window and navigate to the URL http://localhost:3000/
-    here you should see `hello world` displayed after page load
-    updates should show up here automatically
-1. see the `client/src` `readme.md` file for more information on the react project
+## Technologies Used
+- HTML,CSS, Javascript, Node, Express, Mongoose, Mongo, AJAX & React
+- Google Fonts
+- Wireframing & User Stories- Trello & Moque Up
+- Visual Studio Code
 
-# Setup A New Project Without This Template
+## ERD
+![ERD](https://github.com/JordanAclarke/basketball-meetup/blob/master/Project%20Planning%20Pictures/ERD%20Photo.png)
 
-If you want to start a project without using this template directory do the
-following:
+## WireFrames
+![Homepage](https://github.com/JordanAclarke/basketball-meetup/blob/master/Project%20Planning%20Pictures/HomePage%20WireFrame.png)
 
+![AllCourtsPage](https://github.com/JordanAclarke/basketball-meetup/blob/master/Project%20Planning%20Pictures/Courts%20Page%20WireFrame.png)
 
-1. `mkdir <project-name>`
-1. `cd <project-name>`
-1. `echo "# <project-name>" > readme.md`
-1. `git init`
-1. `git add readme.md `
-1. `git commit -m "init repo with readme.md"`
-1. `npm init`
-1. `mkdir models views controllers`
-1. `touch ./server.js`
+![PlayersPage](https://github.com/JordanAclarke/basketball-meetup/blob/master/Project%20Planning%20Pictures/Players%20WireFrame.png)
+
+![IndividualPlayerPage](https://github.com/JordanAclarke/basketball-meetup/blob/master/Project%20Planning%20Pictures/Single%20Player%20WireFrame.png)
+
+## Version 2
+For Version 2, I would like to implement a third party weather api, sport database, and google maps. I want the player to see the exact location on the map and know the projected weather for that day. I would also like to add more react-bootstrap styling and some material-ui to enhance user experience. 
