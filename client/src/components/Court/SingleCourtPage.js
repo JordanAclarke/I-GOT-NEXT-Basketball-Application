@@ -97,7 +97,7 @@ export default class SingleCourtPage extends Component {
         <br />
         <hr />
 
-        <h2>View Players Signed Up To Play:</h2>
+        <h2>Who's Coming?</h2>
         <Link to={`/player/${this.state.court._id}/create`}>
           <h2>Add A Player</h2>
         </Link>

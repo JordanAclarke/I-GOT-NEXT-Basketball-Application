@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Redirect } from "react-router-dom";
 import { Link } from "react-router-dom";
+import {Button} from 'react-bootstrap'
 import DisplayProfile from "./DisplayProfile";
 import SingleCourtPage from "../Court/SingleCourtPage";
 export default class SinglePlayerPage extends Component {
@@ -33,7 +34,11 @@ export default class SinglePlayerPage extends Component {
         <p>Age: {this.state.player.ageGroup}</p>
         <p>Bio: {this.state.player.bio}</p>
 
-        <button onClick={this.handleDeletePlayer}>Delete Player</button>
+        <div className='buttons'>
+        <Link to={`/courts/${this.state.player.courtId}`}> <Button variant="success">Return To Court</Button></Link>
+        <Button variant="danger" onClick={this.handleDeletePlayer}>Delete Player</Button>
+        </div>
+        
       </div>
     );
   }

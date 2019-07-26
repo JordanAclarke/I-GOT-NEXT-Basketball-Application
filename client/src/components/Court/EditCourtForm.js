@@ -30,11 +30,10 @@ state = {
     }
     render() {
         if(this.state.reDirectToHome) {
-            return <Redirect to='/courts' />
+            return <Redirect to={`/courts/${this.state.court._id}`} />
         }
         return (
             <div>
-                <h1>Please Fill Out All Details:</h1>
                 <form onSubmit={this.handleSubmit}>
                 <label htmlFor='court-gym-name'>Court Name</label>
                 <input
