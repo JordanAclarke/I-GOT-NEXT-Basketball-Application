@@ -80,51 +80,46 @@ export default class AllCourtsPage extends Component {
                 
   <Carousel>
   <Carousel.Item>
-    <img
-      className="carousel"
-      src="http://sfwallpaper.com/images/basketball-court-hd-wallpapers-1.jpg"
-      alt="First slide"
-      height="600"
-     width="1500"
-    />
+  <div class="video-size">
+  <video playsinline='true' autoplay='true' muted='true' loop='true'>
+        <source src='slow.mov' type='video/mp4' height='400' width='600'/>
+      </video>
+    </div>
     <Carousel.Caption>
       
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+  <img
       className="carousel"
       src="https://www.downtownmagazinenyc.com/wp-content/uploads/2018/03/SA13-Basketball_revG.jpg"
       alt="Third slide"
       height="600"
      width="1500"
     />
-
     <Carousel.Caption>
     
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-    <img
+    <div class="video-size">
+  <video playsinline='true' autoplay='true' muted='true' loop='true'>
+        <source src='Pexels.mp4' type='video/mp4' />
+      </video>
+    </div>
+    <Carousel.Caption>
+    
+    </Carousel.Caption>
+  </Carousel.Item>
+
+  <Carousel.Item>
+
+  <img
       className="carousel"
       src="https://www.faburous.com/wp-content/uploads/2015/05/Small-basement-court.jpg"
       alt="Third slide"
       height="600"
      width="1500"
-    />
-
-    <Carousel.Caption>
-    
-    </Carousel.Caption>
-  </Carousel.Item>
-
-  <Carousel.Item>
-    <img
-      className="carousel"
-      src="https://static2.mansionglobal.com/production/media/article-images/fd9fbab54ecce5120170b249ef89791d/large_Sky_Basketball_Court.jpg?width=620&height=413"
-      alt="First slide"
-      height="600"
-      width="1500"
     />
     <Carousel.Caption>
       

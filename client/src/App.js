@@ -24,7 +24,7 @@ function App() {
           <Route exact path="/courts" component={AllCourtsPage} />
           <Route exact path="/courts/create" component={CreateCourtForm} />
           <Route exact path="/courts/:courtId" component={SingleCourtPage} />
-          {/* <Route exact path='/courts/:courtId' component={ViewPlayerByCourtId}/> */}
+        
           <Route exact path="/courts/:courtId/edit" component={EditCourtForm} />
           <Route path="/players/:playerId" component={SinglePlayerPage} />
           <Route
@@ -32,11 +32,6 @@ function App() {
             path="/player/:courtId/create"
             component={CreatePlayerForm}
           />
-          {/* <Route
-            exact
-            path="/player/edit/:playerId"
-            component={EditPlayerForm}
-          /> */}
         </Switch>
       </Router>
     </div>
