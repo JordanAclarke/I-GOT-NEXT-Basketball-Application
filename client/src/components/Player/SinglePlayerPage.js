@@ -44,8 +44,8 @@ export default class SinglePlayerPage extends Component {
         <p>Bio: {this.state.player.bio}</p>
 
         <div className='buttons'>
-        <Link to={`/courts/${this.state.player.courtId}`}> <Button variant="success">Return To Court</Button></Link>
-        <Button variant="danger" onClick={this.handleDeletePlayer}>Delete Player</Button>
+        <Link to={`/courts/${this.state.player.courtId}`}> <Button variant="success">Return To Court <i class='fas fa-fast-backward'></i></Button></Link>
+        <Button variant="danger" onClick={this.handleDeletePlayer}>Delete Player <i class='fab fa-confluence'></i></Button>
         </div>
         
       </div>

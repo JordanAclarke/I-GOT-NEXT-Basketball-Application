@@ -86,6 +86,12 @@ state = {
                      value={this.state.court.date}
                     />
 
+                    <label htmlFor='time'>Time:</label>
+                    <input type="text" name="time" 
+                     onChange={this. handleEditInputChange}
+                     value={this.state.court.time}
+                    />
+
                 <input type='submit' value='Update Court Details' />
             </form>
             </div>

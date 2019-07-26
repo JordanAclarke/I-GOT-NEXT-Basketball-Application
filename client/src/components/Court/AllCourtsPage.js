@@ -75,7 +75,7 @@ export default class AllCourtsPage extends Component {
              
                 <div className='link'>
                 
-                <Link to={`/courts/create`} id='text'><Button style={{background: '#FA8320', borderColor: '#FA8320'}} variant="success">Create A Court</Button></Link>
+                <Link to={`/courts/create`} id='text'><Button style={{background: '#FA8320', borderColor: '#FA8320'}} variant="success">Create A Court <i class='fas fa-hands'></i></Button></Link>
                 </div>
                 <br />
                 <h2>{courtsList}</h2>

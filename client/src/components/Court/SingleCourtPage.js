@@ -81,6 +81,7 @@ export default class SingleCourtPage extends Component {
           <h1>{this.state.court.gymName} </h1>
           <h2> Address: {this.state.court.address}</h2>
           <p>Meetup-Date: {this.state.court.date}</p>
+          <p>Time: {this.state.court.time}</p>
           <p>Number of Players Needed: {this.state.court.numberOfPlayers}</p>
           <p>Entry Price: ${this.state.court.entryPrice}</p>
           
@@ -88,10 +89,10 @@ export default class SingleCourtPage extends Component {
       </div>
         <div className="buttons">
           <Link id="text" to={`/courts/${this.state.court._id}/edit`}>
-            <Button variant="success">Edit Court Details </Button>
+            <Button variant="success">Edit Court Details <i class='fas fa-sliders-h'></i> </Button>
           </Link>
           <Button variant="danger" onClick={this.handleDeleteCourt}>
-            Delete Court
+            Delete Court <i class='fab fa-confluence'></i>
           </Button>
         </div>
         <br />
@@ -101,9 +102,9 @@ export default class SingleCourtPage extends Component {
 
         <h1>Who's Coming?</h1>
         <Link to={`/player/${this.state.court._id}/create`}>
-          <h2>Add A Player</h2>
+        <Button variant="success">Add A Player <i class='fas fa-play'></i></Button>
         </Link>
-
+       
         <div className="player-list-conatiner">{playerArray}</div>
 
       </div>

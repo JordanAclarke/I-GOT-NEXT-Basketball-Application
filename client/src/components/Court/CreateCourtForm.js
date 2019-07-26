@@ -54,7 +54,7 @@ export default class CreateCourtForm extends Component {
                 type='text'
                 id='court-img-link'
                 name='imgLink'
-                onChange={this. handleEditInputChange}
+                onChange={this.handleNewCourt}
                 value={this.state.newCourt.imgLink}
                 />
 
@@ -87,8 +87,13 @@ export default class CreateCourtForm extends Component {
           
                     <label htmlFor='date'>Date:</label>
                     <input type="date" name="date" 
-                     onChange={this. handleEditInputChange}
+                     onChange={this.handleNewCourt}
                      value={this.state.newCourt.date}
+                    />
+                     <label htmlFor='time'>Time:</label>
+                    <input type="text" name="time" 
+                     onChange={this.handleNewCourt}
+                     value={this.state.newCourt.time}
                     />
 
           <input type="submit" value="Create Court" />
