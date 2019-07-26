@@ -75,7 +75,12 @@ export default class CreateCourtForm extends Component {
             onChange={this.handleNewCourt}
             value={this.state.newCourt.entryPrice}
           />
-  
+          
+                    <label htmlFor='date'>Date:</label>
+                    <input type="date" name="date" 
+                     onChange={this. handleEditInputChange}
+                     value={this.state.newCourt.date}
+                    />
 
           <input type="submit" value="Create Court" />
         </form>
