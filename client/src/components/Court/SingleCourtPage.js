@@ -8,7 +8,7 @@ export default class SingleCourtPage extends Component {
   state = {
     court: {},
     reDirectToHome: false,
-    players: []
+    players: [],
   };
 
   componentDidMount() {
@@ -35,6 +35,8 @@ export default class SingleCourtPage extends Component {
       this.setState({ players: res.data });
     });
   }
+
+
 
   render() {
     if (this.state.reDirectToHome) {
@@ -103,7 +105,9 @@ export default class SingleCourtPage extends Component {
         </Link>
 
         <div className="player-list-conatiner">{playerArray}</div>
+
       </div>
     );
   }
 }
+

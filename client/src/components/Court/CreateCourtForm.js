@@ -49,6 +49,15 @@ export default class CreateCourtForm extends Component {
             value={this.state.newCourt.gymName}
           />
 
+          <label htmlFor='court-img-link'>Picture Of Court:</label>
+                <input
+                type='text'
+                id='court-img-link'
+                name='imgLink'
+                onChange={this. handleEditInputChange}
+                value={this.state.newCourt.imgLink}
+                />
+
           <label htmlFor="court-address">Address:</label>
           <input
             type="text"
