@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios'
 import CreateCourtForm from './CreateCourtForm'
-import {Carousel, Nav, Navbar} from 'react-bootstrap'
+import {Carousel, Nav, Navbar, Button} from 'react-bootstrap'
 export default class AllCourtsPage extends Component {
 
     state = {
@@ -44,22 +44,14 @@ export default class AllCourtsPage extends Component {
         })
         return (
             <div>
-               <Navbar style={{textAlign: "center"}} variant="dark">
-    <Navbar.Brand href="#home">I Got Next</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="/courts">Courts</Nav.Link>
-    </Nav>
-  </Navbar>
-                {/* <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="/">I-Got-Next</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="/">Home</Nav.Link>
-     
-    </Nav>
-  </Navbar> */}
-            
-             {/* <br></br> */}
+               <Navbar style={{color: "#FA8320"}} variant="dark">
+              <Navbar.Brand style={{color: "#FA8320"}} href="#home">I Got Next</Navbar.Brand>
+               <Nav className="mr-auto">
+               <Nav.Link style={{color: "#FA8320"}} href="/">Home</Nav.Link>
+               <Nav.Link style={{color: "#FA8320"}} href="/courts">Courts</Nav.Link>
+            </Nav>
+          </Navbar>
+
             <br></br> 
             <br></br>
        
@@ -78,9 +70,8 @@ export default class AllCourtsPage extends Component {
                 <h1>Open Courts/Parks:</h1>
              
                 <div className='link'>
-                <Link to='/' id='text'><h2>Return Home</h2></Link>
                 
-                <Link to={`/courts/create`} id='text'><h2>Create A Court</h2></Link>
+                <Link to={`/courts/create`} id='text'><Button style={{background: '#FA8320', borderColor: '#FA8320'}} variant="success">Create A Court</Button></Link>
                 </div>
                 <h2>{courtsList}</h2>
 
