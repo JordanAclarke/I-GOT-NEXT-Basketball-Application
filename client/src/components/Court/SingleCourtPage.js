@@ -66,7 +66,7 @@ export default class SingleCourtPage extends Component {
     return (
       <div>
       <Navbar style={{textAlign: "center", display: 'flex', alignContent: 'flexEnd'}} variant="dark">
-      <Navbar.Brand style={{color: "#FA8320"}}  href="#home">I Got Next</Navbar.Brand>
+      <Navbar.Brand style={{color: "#FA8320"}}  href="#home">I Got Next <i class="fas fa-basketball-ball"></i></Navbar.Brand>
       <Nav className="mr-auto">
       <Nav.Link style={{color: "#FA8320"}} href="/">Home</Nav.Link>
       <Nav.Link style={{color: "#FA8320"}} href="/courts">Courts</Nav.Link>

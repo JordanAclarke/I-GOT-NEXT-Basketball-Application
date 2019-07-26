@@ -15,7 +15,7 @@ export default class Home extends Component {
 <Link to='/courts' id='text'>
  <div className='section'> 
 
-      <h1 class='name'>I Got Next</h1>
+      <h1 class='name'>I Got Next <i class="fas fa-basketball-ball"></i></h1>
       
       <div className='color-overlay'></div>
       <div className='video-container'> 

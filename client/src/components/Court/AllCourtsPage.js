@@ -49,7 +49,7 @@ export default class AllCourtsPage extends Component {
         return (
             <div>
                <Navbar style={{color: "#FA8320"}} variant="dark">
-              <Navbar.Brand style={{color: "#FA8320"}} href="#home">I Got Next</Navbar.Brand>
+              <Navbar.Brand style={{color: "#FA8320"}} href="#home">I Got Next <i class="fas fa-basketball-ball"></i></Navbar.Brand>
                <Nav className="mr-auto">
                <Nav.Link style={{color: "#FA8320"}} href="/">Home</Nav.Link>
                <Nav.Link style={{color: "#FA8320"}} href="/courts">Courts</Nav.Link>
@@ -71,7 +71,7 @@ export default class AllCourtsPage extends Component {
                     <div className='jumping-ball'>🏀 </div>
                     <hr></hr>
                 </div>
-                <h1>Open Courts/Parks:</h1>
+                <h1>Open Courts/Parks <i class='far fa-bell'></i>: </h1>
              
                 <div className='link'>
                 
