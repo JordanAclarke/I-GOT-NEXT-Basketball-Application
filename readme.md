@@ -3,7 +3,8 @@
 For Project Three, I created a basketball meetup app. This app will allow players to post a court they're going to play at. Players can also see other current courts and add themself to that court. The players will display at the bottom of the court page so that other players can see who's going on that day.  
 
 ## Project Links
-[Trello](https://trello.com/b/SDqnrTU7/jordan-clarke-project-3-board)
+[Trello Planning Board](https://trello.com/b/SDqnrTU7/jordan-clarke-project-3-board)
+
 [I-Got-Next](https://i-got-next.herokuapp.com/)
 
 ## Technologies Used
