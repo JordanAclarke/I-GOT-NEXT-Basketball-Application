@@ -13,6 +13,7 @@ export default class Home extends Component {
                     <hr></hr>
                 </div> */}
 <Link to='/courts' id='text'>
+  
  <div className='section'> 
 
       <h1 class='name'>I Got Next <i class="fas fa-basketball-ball"></i></h1>
