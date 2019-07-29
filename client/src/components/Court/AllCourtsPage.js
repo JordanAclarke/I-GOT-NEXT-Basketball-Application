@@ -83,7 +83,7 @@ export default class AllCourtsPage extends Component {
  
 
                 
-  <Carousel>
+  <Carousel interval={3000}>
   <Carousel.Item>
   <div class="video-size">
   <video playsinline='true' autoplay='true' muted='true' loop='true'>
